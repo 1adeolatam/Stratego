@@ -5,7 +5,6 @@
 class Movable{
 
 public:
-char pieceID();
 bool isLegalMove();
 bool isBlockedPath();
 void move(Position);

@@ -5,10 +5,10 @@
 
 class Piece{
 	Position pos;
-
+	char ID;
 public:
-void setPosition(Position);
-
+	void setPosition(Position);
+	char pieceID();
 
 }
-
+#endif

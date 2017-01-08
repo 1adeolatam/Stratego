@@ -5,8 +5,6 @@
 
 class Immovable{
 
-public:
-char pieceID();
 
 }
 #endif
