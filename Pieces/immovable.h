@@ -1,10 +1,7 @@
 #ifndef IMMOVABLE_H
 #define IMMOVABLE_H
-
 #include "pieces.h"
-
-class Immovable{
-
+class Immovable : public Piece{
 
 }
 #endif
