@@ -1,9 +1,11 @@
 #ifndef MOVABLE_H
 #define MOVABLE_H
-#include "pieces.h"
+#include "piece.h"
+#include <stdlib.h>
+
 class Movable : public Piece{
 public:
-bool isLegalMove(Position);
+virutal bool isLegalMove(Position);
 bool isBlockedPath(Position);
 void move(Position);
 };

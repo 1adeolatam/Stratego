@@ -4,6 +4,7 @@
 
 class Scout : public Movable{
  const char ID = '9';
-
+public:
+void isLegalMove(Position p) override ;
 };
 #endif
