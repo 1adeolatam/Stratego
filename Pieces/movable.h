@@ -5,6 +5,7 @@
 
 class Movable : public Piece{
 public:
+Movable(Position);
 virutal bool isLegalMove(Position);
 bool isBlockedPath(Position);
 void move(Position);
