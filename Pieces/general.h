@@ -2,8 +2,8 @@
 #define GENERAL_H
 #include "movable.h"
 
-class General{
+class General : public Movable{
+ const char ID = '2';
 
-
-}
+};
 #endif

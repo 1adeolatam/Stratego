@@ -2,8 +2,8 @@
 #define LIEUTENANT_H
 #include "movable.h"
 
-class Lieutenant{
+class Lieutenant : public Movable{
+ const char ID = '6';
 
-
-}
+};
 #endif

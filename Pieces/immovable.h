@@ -3,5 +3,5 @@
 #include "pieces.h"
 class Immovable : public Piece{
 
-}
+};
 #endif

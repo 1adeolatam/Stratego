@@ -2,8 +2,8 @@
 #define MAJOR_H
 #include "movable.h"
 
-class Major{
+class Major : public Movable{
+ const char ID = '4';
 
-
-}
+};
 #endif

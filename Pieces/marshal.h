@@ -2,8 +2,8 @@
 #define MARSHAL_H
 #include "movable.h"
 
-class Marshal{
+class Marshal : public Movable{
+ const char ID = '1';
 
-
-}
+};
 #endif

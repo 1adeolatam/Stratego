@@ -8,4 +8,4 @@ bool isBlockedPath(Position p){
 }
 void move(Position p){
 }
-};
+}

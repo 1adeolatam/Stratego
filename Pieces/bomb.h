@@ -2,7 +2,8 @@
 #define BOMB_H
 #include "immovable.h"
 
-class Bomb{
+class Bomb : public Immovable{
+ const char ID = 'B';
 
 
 }

@@ -2,8 +2,8 @@
 #define SERGEANT_H
 #include "movable.h"
 
-class Sergeant{
+class Sergeant : public Movable{
+ const char ID = '7';
 
-
-}
+};
 #endif

@@ -2,8 +2,8 @@
 #define CAPTAIN_H
 #include "movable.h"
 
-class Captain{
+class Captain : public Movable{
+ const char ID = '5';
 
-
-}
+};
 #endif

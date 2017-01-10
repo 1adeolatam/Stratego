@@ -2,8 +2,8 @@
 #define SCOUT_H
 #include "movable.h"
 
-class Scout{
+class Scout : public Movable{
+ const char ID = '9';
 
-
-}
+};
 #endif

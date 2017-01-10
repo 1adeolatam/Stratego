@@ -5,7 +5,8 @@ class Piece{
 	Position pos;
 	char ID;
 public:
+	virtual Piece(Position) = 0;
 	void setPosition(Position);
 	char pieceID();
-}
+};
 #endif

@@ -6,5 +6,5 @@ public:
 bool isLegalMove(Position);
 bool isBlockedPath(Position);
 void move(Position);
-}
+};
 #endif

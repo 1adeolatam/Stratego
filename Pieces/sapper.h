@@ -2,8 +2,8 @@
 #define SAPPER_H
 #include "movable.h"
 
-class Sapper{
+class Sapper : public Movable{
+ const char ID = '8';
 
-
-}
+};
 #endif
