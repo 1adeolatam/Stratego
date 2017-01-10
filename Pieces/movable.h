@@ -5,9 +5,9 @@
 
 class Movable : public Piece{
 public:
-Movable(Position);
-virutal bool isLegalMove(Position);
-bool isBlockedPath(Position);
-void move(Position);
+Movable();
+virutal bool isLegalMove();
+bool isBlockedPath();
+void move();
 };
 #endif
