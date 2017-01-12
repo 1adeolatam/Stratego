@@ -1,12 +1,7 @@
 #include "piece.h"
-class Piece{
-	Position pos;
-	char ID;
-public:
-	void setPosition(Position p){
+void Piece::setPosition(Position p){
 		if(isValidPosition(p)){pos = p;}
 	}
-	char pieceID(){
+char Piece::pieceID(){
 		return ID;
 	}
-};

@@ -1,5 +1,5 @@
 #include "tile.h"
-Tile :: Tile(int x, int y) : x(x), y(x){
+Tile :: Tile(int x, int y, char display) : x(x), y(x), display(display){
 	
 }
 
@@ -20,4 +20,3 @@ void Tile::rmPiece(){
 			display = '.';
 		}
 	}
-	

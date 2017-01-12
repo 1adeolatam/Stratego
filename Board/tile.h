@@ -7,11 +7,10 @@ class Tile{
 	int x,y;
 	char display;
 	public:
-	Tile(int x, int y);
+	Tile(int x, int y, char);
 	int xPos();
 	int yPos();
 	char getDisplay();
-	
 	Piece* getPiece();
 	void setPiece(Piece*);
 	bool hasPiece();

@@ -1,12 +1,12 @@
 #ifndef PIECE_H
 #define PIECE_H
 class Piece{
-	Position pos;
+	int x,y;
 	char ID;
 public:
-	virtual Piece(Position) = 0;
+	virtual Piece() = 0;
 	Position getPosition();
-	void setPosition(Position);
+	void setPosition(int x, int y);
 	char pieceID();
 };
 #endif
