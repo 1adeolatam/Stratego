@@ -2,6 +2,8 @@
 #define TILE_H
 #include "../Pieces/piece.h"
 class Tile{
+	protected:
+	TextDisplay *td;
 	Piece* curPiece;
 	bool occupied;
 	int x,y;

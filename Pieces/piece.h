@@ -1,5 +1,6 @@
 #ifndef PIECE_H
 #define PIECE_H
+
 class Piece{
 	int x,y;
 	char ID;

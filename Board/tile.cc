@@ -18,5 +18,6 @@ void Tile::rmPiece(){
 			curPiece = nullptr;
 			occupied = false;
 			display = '.';
+			textDisplay->notify(r, c, display);
 		}
 	}
