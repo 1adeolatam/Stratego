@@ -87,6 +87,7 @@ void displayBoard(){
 	string disp;
 	for(int i = 0; i < 11; ++i){
 		cout << endl;
+		Board[i][10] = 10 - i;
 		for(int j = 0; j < 11; ++j){
 			if(i < 10 && j < 10){
 			switch(Board[i][j]){
@@ -134,7 +135,10 @@ void displayBoard(){
 			break;
 		}
 		 }else{
-			 if(i == 10){
+			 for(int k = 0; k < 10; ++k){
+				Board[10][k] = 'a'+k;
+			 }
+			if(i == 10){
 				 disp = " ";
 				 disp += (char) Board[i][j];
 				 disp += " ";
@@ -157,12 +161,6 @@ void displayBoard(){
 		
 		 cout << endl << endl;
 	}
-
-
-void readLayout(){
-	
-	
-}	
 	
 int main(int argc, char **argv)
 {
@@ -215,13 +213,35 @@ int main(int argc, char **argv)
 	}
 	
 	
-	setup();
+	cout << "        S T R A T E G O 1 . 0                            "  << endl
+	     << " A command-line iteration of the underrated board game.  "  << endl
+	     << " Menu:                                                   "  << endl
+	     << " 'exit' to leave the program.             "  << endl
+	     << " 'disp' to display the current state of the board.     "  << endl
+	     << " 'new' to request a new game.                          "  << endl
+	     << " The player setups must be saved in separate txt files   "  << endl;
+	     
+	string inp;
+	while(true){
+		 getline (cin, inp);
+		if (inp.substr(0, 4) == "exit")   {
+	          break;
+	         }
+		if(inp.substr(0,3) == "new"){
+			setup();
+		}
+		if(inp.substr(0,4) == "disp"){
+			displayBoard();
+		}
+		
+		
+	}
 	
-	displayBoard();
+	
+	
+	
+	
 	return 0;
 }
 	
 	
-	
-
-
