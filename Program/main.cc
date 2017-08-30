@@ -154,7 +154,7 @@ void displayBoard(){
 		 }
 			 
 			 cout << " " << disp << " ";
-			// cout << " " << Board[i][j]	 << " ";
+			//cout << " " << Board[i][j]	 << " ";
 			 
 			}
 		}
