@@ -7,7 +7,7 @@ Piece :: Piece(char c): tile(NULL), color(c){
 Piece :: ~Piece(){
 }
 
-Piece :: bool moveTo(Player& moveMaker, Tile& trgt){
+bool Piece :: moveTo(Player& moveMaker, Tile& trgt){
 
 Piece* potCapture = NULL:
 Tile* src = tile;
@@ -24,25 +24,25 @@ if(color == moveMaker.getColor()){
 			validMove = true;
 		}
 		if(validMove){
-			
-			//TODO make attacking a square pssible
-			
-			
-			
-			
+			if(potCapture){
+				potCapture->setLocation(NULL);
+			}
+			tile->setPiece(NULL);
+			tile = &trgt;
+			tile->setPiece(this);
+			//TODO make attacking a square pssible			
 		}
-		
+		}		
 	}	
-	
+	return validMove;
+}	
 }
-	
-	
+void Piece :: setLocation(Tile* trgt){
+	tile = trgt;
 }
-
-
-	virtual void setLocation(Tile* trgt);
-	virtual int value() const = 0;
-	char color() const;
-	virtual void display() const = 0;
-	virtual bool canMoveTo(Tile& trgt) const = 0;
-	Tile* location()const;
+char Piece :: color() const{
+	return color;
+}
+Tile* Piece :: location()const{
+	return tile;
+}
