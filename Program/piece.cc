@@ -1,25 +1,48 @@
 #include "piece.h"
+#include "player.h"
 
-Piece :: Piece(int type, int file, int rank, struct player* owner){
-	this.type = type;
-	this.file = file;
-	this.rank = rank;
-	this.owner = owner;
+Piece :: Piece(char c): tile(NULL), color(c){
+	
 }
-int Piece :: getFile(){
-	return this.file;
-}
-int Piece :: getRank(){
-	return this.rank();
-}
-int Piece :: getType(){
-	return this.type();
-}
-struct player * Piece :: getOwner(){
-	return this.owner;
+Piece :: ~Piece(){
 }
 
-void Piece :: void moveTo(int f , int r){
-	file = f;
-	rank = r;
+Piece :: bool moveTo(Player& moveMaker, Tile& trgt){
+
+Piece* potCapture = NULL:
+Tile* src = tile;
+bool validMove = false;
+
+if(color == moveMaker.getColor()){
+	if(canMoveTo(trgt){
+		if(trgt.isOccupied()){
+			potCapture = trgt.getOccupant();
+			if(potCapture->getColor() != moveMaker.getColor()){
+					validMove = true;
+			}
+		}else{
+			validMove = true;
+		}
+		if(validMove){
+			
+			//TODO make attacking a square pssible
+			
+			
+			
+			
+		}
+		
+	}	
+	
 }
+	
+	
+}
+
+
+	virtual void setLocation(Tile* trgt);
+	virtual int value() const = 0;
+	char color() const;
+	virtual void display() const = 0;
+	virtual bool canMoveTo(Tile& trgt) const = 0;
+	Tile* location()const;

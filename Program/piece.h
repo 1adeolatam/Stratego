@@ -1,10 +1,9 @@
 #ifndef __PIECE_H__
 #def __PIECE_H_
 
-#include <string>
-#include "player.h"
-#include <cctype>
-#include <iostream>
+#include <ostream>
+#include "board.h"
+#include "tile.h"
 
 
 // The identification number of Piece types
@@ -37,23 +36,21 @@ const int amtSPY = 1;
 
 
 struct Piece{
+	private:
+	Tile * tile;
 	protected:
-	int file;
-	int rank;
-	struct player* owner;
-	int type;
+	char color;
 	public:
-	Piece(int type, int file, int rank, struct player* owner);
-	~Piece();
-	int getFile();
-	int getRank();
-	int getType();
-	struct player* getOwner();
-	void moveTo(int file , int rank);
-	
-};
-
-
+	Piece(char c);
+	virtual ~Piece();
+	virtual bool moveTo(Player& moveMaker, Tile& trgt);
+	virtual void setLocation(Tile* trgt);
+	virtual int value() const = 0;
+	char color() const;
+	virtual void display() const = 0;
+	virtual bool canMoveTo(Tile& trgt) const = 0;
+	Tile* location()const;
+ };
 #endif
 
 
