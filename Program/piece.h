@@ -4,7 +4,7 @@
 #include <ostream>
 #include "board.h"
 #include "tile.h"
-
+#include <string>
 
 // The identification number of Piece types
 const int BOMB =  'B';
@@ -47,8 +47,9 @@ struct Piece{
 	virtual void setLocation(Tile* trgt);
 	virtual int value() const = 0;
 	char color() const;
-	virtual void display() const = 0;
-	virtual bool canMoveTo(Tile& trgt) const = 0;
+	//display either red or blue
+	void display() const = 0;
+	bool canMoveTo(Tile& trgt) const = 0;
 	Tile* location()const;
  };
 #endif

@@ -2,25 +2,24 @@
 #include "piece.h"
 
 
-Tile::Tile(int x, int y): x(x), y(y) Occupant(NULL)
+Tile::Tile(int rank, int file): rank(rank), file(file) Occupant(NULL)
 {
 } 
 
 Tile :: ~Tile(){
 }
-Tile :: void setPiece(Piece * p){
+void Tile :: setPiece(Piece * p){
 	Occupant = p;
 }
-
-Tile :: bool isOccupied()const{
+bool Tile :: isOccupied()const{
 	return Occupant;
 }
-Tile :: Piece* getOccupant()const{
+Piece* Tile ::  getOccupant()const{
 	return Occupant;
 }
-Tile :: int getX()const{
-	return x;
+int Tile ::  getRank()const{
+	return rank;
 }
-Tile :: int getY()const{
-	return y;
+int  Tile :: getFile()const{
+	return file;
 }

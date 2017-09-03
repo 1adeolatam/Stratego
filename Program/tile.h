@@ -4,18 +4,18 @@ class Piece;
 
 class Tile{
 	private:
-	int x;
-	int y;
+	int rank;
+	int file;
 	Piece* Occupant;
 	
 	public:
 	Tile();
-	Tile(int x, int y);
+	Tile(int rank, int file);
 	~Tile();
 	void setPiece(Piece * p);
 	bool isOccupied()const;
 	Piece* getOccupant()const;
-	int getX()const;
-	int getY()const;
+	int getRank()const;
+	int getFile()const;
 };
 #endif
