@@ -2,7 +2,6 @@
 #def __PIECE_H_
 
 #include <ostream>
-#include "board.h"
 #include "tile.h"
 #include <string>
 

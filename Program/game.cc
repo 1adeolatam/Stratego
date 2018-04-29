@@ -5,26 +5,24 @@
 #include <stdlib.h>
 #include <time.h>
 
-#inclide "board.h"
-#inclide "colonel.h"
-#inclide "general.h"  
-#inclide "marshal.h" 
-#inclide "sapper.h"  
-#inclide "spy.h"
-#inclide "bomb.h"
-#inclide "flag.h"
-#inclide "lieutenant.h"
-#inclide "piece.h"
-#inclide "scout.h"
-#inclide "tile.h"
-#inclide "captain.h"
-#inclide "game.h"
-#inclide "major.h"
-#inclide "player.h"
-#inclide "sergeant.h"
-#inclide "water.h"
-
-
+#include "Pieces/board.h"
+#include "Pieces/colonel.h"
+#include "Pieces/general.h"  
+#include "Pieces/marshal.h" 
+#include "Pieces/sapper.h"  
+#include "Pieces/spy.h"
+#include "Pieces/bomb.h"
+#include "Pieces/flag.h"
+#include "Pieces/lieutenant.h"
+#include "Pieces/piece.h"
+#include "Pieces/scout.h"
+#include "Pieces/tile.h"
+#include "Pieces/captain.h"
+#include "Pieces/game.h"
+#include "Pieces/major.h"
+#include "Pieces/player.h"
+#include "Pieces/sergeant.h"
+#include "Pieces/water.h"
 
 Game :: Game(){
 }
@@ -46,7 +44,7 @@ Game :: ~Game(){
     // Delete players
     delete &RedP;
 	delete &BlueP;
-	
+
 }
 
 
@@ -71,7 +69,7 @@ void Game :: init(){
 		while(lnstrm >> value){
 			if(isdigit(value)){
 				// create  correct red pieces
-				id = value - '0';				
+				id = value - '0';
 				switch(id){
 			case MARSHAL:
 			aPiece = new Marshal('r');
