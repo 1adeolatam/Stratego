@@ -1,13 +1,12 @@
-#ifdenf __GAME_H__
+#ifndef __GAME_H__
 #define __GAME_H__
 
 #include <iostream>
 #include <string>
 
-#include "piece.h"
-#include "board.h"
+#include "../Pieces/piece.h"
 #include "player.h"
-#include "vector.h"
+#include <vector>
 const int BOMB =  'B';
 const int MARSHAL = 1;
 const int GENERAL = 2;

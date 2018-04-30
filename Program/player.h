@@ -1,8 +1,8 @@
 #ifndef __PLAYER_H__
-#def __PLAYER_H__
+#define __PLAYER_H__
 
 #include <string>
-#include "piece.h"
+#include "../Pieces/piece.h"
 #include <vector>
 
 class Player{

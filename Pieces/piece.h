@@ -1,5 +1,5 @@
 #ifndef __PIECE_H__
-#def __PIECE_H_
+#define __PIECE_H_
 
 #include <ostream>
 #include "tile.h"
