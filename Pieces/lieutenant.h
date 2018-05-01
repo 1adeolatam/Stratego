@@ -6,10 +6,8 @@
 
 class Lieutenant : public Piece{
 	public:
-	Lieutenant(char c);
+	Lieutenant(int,int);
 	~Lieutenant();
-	int value();
-	bool canMoveTo(Tile& trgt);
 	void display();	
 }
 

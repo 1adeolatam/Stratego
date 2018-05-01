@@ -40,8 +40,13 @@ bool Piece ::move(Tile board[][],int rank, int file){
 	//Destination is on the board
 	   if(board[potRank[i]][potFile[i]] != NULL && board[potRank[i]][potFile[i]]->getPiece.getColour() != colour){
 	    //Destination has enemy piece
-	          //TODO:
-		//ADD CHECK FOR WATER TILES
+	          //TODO:Prevent addition of water tiles
+		if(potRank[i] == 4 || potRank[i] == 5){
+		 if(potFile[i] == 2 || potFile[i] == 3 || potFile[i] == 6 || potFile[i] == 7){
+		}else{
+			possibleDestinations.add(board[potRank[i]][potFile[i]]);
+		}
+	       }
 	 possibleDestinations.add(board[potRank[i]][potFile[i]]);
 	   }
 	  }

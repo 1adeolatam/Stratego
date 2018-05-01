@@ -6,10 +6,8 @@
 
 class Major : public Piece{
 	public:
-	Major(char c);
+	Major(int,int);
 	~Major();
-	int value();
-	bool canMoveTo(Tile& trgt);
 	void display();	
 }
 

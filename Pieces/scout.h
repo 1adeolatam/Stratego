@@ -8,8 +8,6 @@ class Scout : public Piece{
 	public:
 	Scout(char c);
 	~Scout();
-	int value();
-	bool canMoveTo(Tile& trgt);
 	void display();	
 }
 

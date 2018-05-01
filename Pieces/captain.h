@@ -6,11 +6,9 @@
 
 class Captain : public Piece{
 	public:
-	Captain(char c);
+	Captain(int ,int);
 	~Captain();
-	int value();
-	bool canMoveTo(Tile& trgt);
-	void display();	
+	void display();
 }
 
 #endif 

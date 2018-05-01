@@ -6,10 +6,8 @@
 
 class Flag : public Piece{
 	public:
-	Flag(char c);
+	Flag(int,int);
 	~Flag();
-	int value();
-	bool canMoveTo(Tile& trgt);
 	void display();	
 }
 

@@ -8,8 +8,6 @@ class Spy : public Piece{
 	public:
 	Spy(char c);
 	~Spy();
-	int value();
-	bool canMoveTo(Tile& trgt);
 	void display();	
 }
 

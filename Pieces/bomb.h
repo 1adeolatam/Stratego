@@ -6,11 +6,9 @@
 
 class Bomb : public Piece{
 	public:
-	Bomb(char c);
+	Bomb(int colour,int type);
 	~Bomb();
-	int value();
-	bool canMoveTo(Tile& trgt);
-	void display();	
+	void display();
 }
 
 #endif 

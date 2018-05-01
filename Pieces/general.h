@@ -6,10 +6,8 @@
 
 class General : public Piece{
 	public:
-	General(char c);
+	General(int,int);
 	~General();
-	int value();
-	bool canMoveTo(Tile& trgt);
 	void display();	
 }
 

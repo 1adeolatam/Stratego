@@ -6,10 +6,8 @@
 
 class Colonel : public Piece{
 	public:
-	Colonel(char c);
+	Colonel(int,int);
 	~Colonel();
-	int value();
-	bool canMoveTo(Tile& trgt);
 	void display();	
 }
 

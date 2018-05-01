@@ -8,8 +8,6 @@ class Sergeant : public Piece{
 	public:
 	Sergeant(char c);
 	~Sergeant();
-	int value();
-	bool canMoveTo(Tile& trgt);
 	void display();	
 }
 

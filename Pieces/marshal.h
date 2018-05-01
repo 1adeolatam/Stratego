@@ -6,10 +6,8 @@
 
 class Marshal : public Piece{
 	public:
-	Marshal(char c);
+	Marshal(int,int);
 	~Marshal();
-	int value();
-	bool canMoveTo(Tile& trgt);
 	void display();	
 }
 
