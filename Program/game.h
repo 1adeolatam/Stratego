@@ -21,8 +21,9 @@ const int SPY = 'S';
 const int FLAG = 'F';
 
 class Game{
+	Tile* board[10][10];
 	private:
-	Game();
+	Game(char **argv);
 	static Player* RedP;
 	static Player* BlueP;
 	static Player* nextPlayer;
@@ -30,10 +31,12 @@ class Game{
 	static std::vector<Piece *> bluePieces;
 	public:
 	~Game();
-	static void init();
-	static void chooseRandPiece(char playerColor,int randnum );
+	static void init(char **argv);
+	static void chooseRandPiece(int playerColor,int randnum );
 	static Player* getNextPlayer();
 	static Player* getOpponent();
-	
+	static displayBoard();
+	static void setUpplayer(int color);
+	static void menu();
 };
 #endif

@@ -8,22 +8,18 @@
 
 using namespace std;
 
-Player :: Player(std::string name,char color,vector<Piece*>&Pieces,bool isHuman):
-name(name),color(color), Pieces(Pieces), isHuman(isHuman)
+Player :: Player(std::string name,int colour,vector<Piece*>&Pieces,bool isHuman):
+name(name),colour(colour), Pieces(Pieces), isHuman(isHuman)
 {	
 }
 
 Player ::~Player(){
 }
 
-char Player :: getColor()const{
-	return color;
+char Player :: getColour()const{
+	return colour;
 }
 vector<Piece*>* Player::Pieces() const{
-	return &Pieces;	
-}
-string Player::getName() const{
-	return name;
+	return &Pieces;
 }
 
-bool

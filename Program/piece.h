@@ -38,16 +38,24 @@ struct Piece{
 	private:
 	int type;
 	int colour;
+	bool isVisible;
+	Tile* location;
 	protected:
-	vector<Tile> possibleDestiations;
+	vector<Tile*> possibleDestiations;
 	public:
 	Piece(int colour, int type);
 	~Piece();
+	Tile* getLocation();
+	void setLocation(Tile*);
 	char getColour();
+	bool getVisibility();
+	void setVisibliity(bool);
 	//display either red or blue
-	virtual void display();
-	virtual vector<Tile> move(Tile[][],int rank, int file);
+	void display();
+	vector<Tile*> move(Tile[][],int rank, int file);
  };
 #endif
+
+
 
 

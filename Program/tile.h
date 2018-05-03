@@ -17,5 +17,6 @@ class Tile{
 	Piece* getOccupant()const;
 	int getRank()const;
 	int getFile()const;
+	void display();
 };
 #endif

@@ -55,3 +55,36 @@ const int WATER = -3;
 water tiles are
 (5,2)(5,3)  (5,6)(5,7)
 (4,2)(4,3)  (4,6)(4,7)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	//red and blue
+	if(color == 'r'){
+		cout << "\033[1;41mCAP\033[0m";
+	}else if(color == 'b'){
+		cout << "\033[1;44mCAP\033[0m";
+	}

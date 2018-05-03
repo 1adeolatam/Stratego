@@ -16,8 +16,49 @@ Tile* Piece :: location()const{
 //Almost all the stratego pieces move 1 unit in either forward
 //backward, left or right.
 //So only overriding required is for Bomb,Flag and Scout(which is only constrained by the board).
+bool Piece :: getVisibility(){
+	return isVisible;
+}
+void Piece :: setVisibility(bool f){
+	isVisible = f;
+}
+void Piece :: dislpay(){
+	
+	if(colour == RED){
+		cout << "\033[1;41m";
+	}else{
+		cout << "\033[1;44m";
+	}
+switch(type){
+case BOMB:cout<<" B ";
+break;
+case MARSHAL:cout<<"MAR";
+break;
+case GENERAL:cout<<"GEN";
+break;
+case COLONEL:cout<<"COL";
+break;
+case MAJOR:cout<<"MAJ";
+break;
+case CAPTAIN:cout<<"CAP";
+break;
+case LIEUTENANT:cout<<"LIE";
+break;
+case SERGEANT:cout<<"SER";
+break;
+case SAPPER:cout<<"SAP";
+break;
+case SCOUT:cout<<"SCO";
+break;
+case SPY:cout<<"SPY";
+break;
+case FLAG:cout<<" F ";
+break;
+}
+	cout << "\033[0m";
+}
 
-bool Piece ::move(Tile board[][],int rank, int file){
+std::vector<Tile> Piece ::move(Tile board[][],int rank, int file){
 	possibleDestinations.clear();
 	switch(type){
 	case BOMB:
@@ -55,4 +96,5 @@ bool Piece ::move(Tile board[][],int rank, int file){
 
 	return possibleDestinations;
 }
+
 

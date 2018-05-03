@@ -7,16 +7,14 @@
 
 class Player{
 private:
-std::string name;
 vector<Piece*> Pieces;
-char color;
+int colour;
 bool isHuman;
 
 public:
-	Player(std::string name,char color,vector<Piece*>&Pieces,bool isHuman);
+	Player(std::string name,int colour,vector<Piece*>&Pieces,bool isHuman);
 	~Player();
 	bool makeMove();
-	std::string getName() const;
 	char getColor() const;
 	std::vector<Piece*>* getPieces() const;	
 };
