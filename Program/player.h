@@ -10,6 +10,7 @@ private:
 vector<Piece*> Pieces;
 int colour;
 bool isHuman;
+int wins = 0;
 
 public:
 	Player(std::string name,int colour,vector<Piece*>&Pieces,bool isHuman);

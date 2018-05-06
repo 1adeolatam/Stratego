@@ -22,21 +22,20 @@ const int FLAG = 'F';
 
 class Game{
 	Tile* board[10][10];
-	private:
+	//bool running;
 	Game(char **argv);
 	static Player* RedP;
 	static Player* BlueP;
-	static Player* nextPlayer;
-	static std::vector<Piece *> redPieces;
-	static std::vector<Piece *> bluePieces;
+	static Player* curPlayer;
 	public:
 	~Game();
 	static void init(char **argv);
-	static void chooseRandPiece(int playerColor,int randnum );
 	static Player* getNextPlayer();
 	static Player* getOpponent();
 	static displayBoard();
-	static void setUpplayer(int color);
+	static void setUpplayer(int color, ifstream pSetup);
 	static void menu();
+	int gamesPlayed =0;
+	static void play();
 };
 #endif

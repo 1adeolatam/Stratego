@@ -82,32 +82,33 @@ void Game :: setUpplayer(int colour, ifstream pSetup){
 	}
 
 	}
+
 void Game :: menu(){
 	//Menu
 	cout << "\033[1;41mbold \033[0m" << "red text";
 	cout << "        S T R A T E G O                             "  << endl
 	     << " A command-line iteration of the game stratego.  "  << endl
-	     << " 'exit' to leave the program.             "  << endl
-	     << " 'disp' to display the current state of the board.     "  << endl
-	     << " 'p' to play stratego.                          "  << endl
+	     << " '1' to play stratego.             "  << endl
+	     << " '2' to exit.                          "  << endl
 	
-	string inp;
-	while(true){
-		 getline (cin, inp);
-		if (inp.substr(0, 4) == "exit")   {
-	          break;
-	         }
-		if(inp.substr(0,3) == "new"){
-			setup();
-		}
-		if(inp.substr(0,4) == "disp"){
-			displayBoard();
-		}
+	int inp;
+	loopstart:
+		 cin >> inp;
+		 switch(inp){
+		 case 1:
+		 play();
+		 break;
+		 case 2:
 		
+		 default:
+		 goto loopstart; 
+		 break;
+		 }
+		 
 		
+	
 	}
 	
-	}
 void Game :: init(char **argv){
 	//setup tiles
 	for(int i = 0; i < 10; ++i){
@@ -120,5 +121,24 @@ void Game :: init(char **argv){
 	ifstream p2Setup(argv[2]);
 	setUpplayer(0,p1Setup);
 	setUpplayer(1,p2Setup);
+	running = true;
 	menu();
 }
+
+void Game :: play(){
+		
+		while(running){
+			//Get input for user
+			// could be a valid move
+			// exit 
+			
+			//move second player
+			
+		
+		
+		
+		//switch to next player
+		curPlayer = curPlayer == RedP ? BlueP: RedP;
+		}
+		
+		}
